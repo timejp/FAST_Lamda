@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -53,6 +56,26 @@ public class MainActivity extends AppCompatActivity {
         // arg : num -> num * num;
         int result = arg.squareParameter(50);
         System.out.println("result : " + result);
+
+
+        Button bt_run_loop = (Button) findViewById(R.id.bt_run_loop);
+        Button bt_run_stream = (Button) findViewById(R.id.bt_run_stream);
+
+        String objectArray[] = {"A", "B", "C", "DX", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"};
+
+        bt_run_loop.setOnClickListener((v) -> {
+            for (String str : objectArray) {
+                if (str.length() == 1)
+                    System.out.println("I am " + str);
+            }
+        });
+
+        bt_run_stream.setOnClickListener((v) -> {
+            Stream<String> stream = Arrays.stream(objectArray);
+
+            stream.filter(a -> a.length() == 1);
+            stream.forEach(a -> System.out.println(a));
+        });
     }
 
     View.OnClickListener clickListener = new View.OnClickListener() {

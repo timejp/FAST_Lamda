@@ -33,4 +33,27 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:id="@+id/editText" />
+
+    <Button
+        android:text="Run Loop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/bt_run_loop" />
+
+    <Button
+        android:text="Run Stream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bt_run_loop"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:id="@+id/bt_run_stream" />
 </RelativeLayout>
