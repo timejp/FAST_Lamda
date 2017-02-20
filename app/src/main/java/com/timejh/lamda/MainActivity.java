@@ -76,7 +76,24 @@ public class MainActivity extends AppCompatActivity {
     */
 
     public LamdaFunction calc() {
-        return num -> num * num;
+//        return num -> num * num;
+//
+//        return num -> {return num * num;};
+//
+//        return num -> {
+//            switch (num) {
+//                case 5:
+//                    return num * num * num;
+//            }
+//            return num * num;
+//        };
+//
+        return new LamdaFunction(){
+            @Override
+            public int squareParameter(int value) {
+                return value * value;
+            }
+        };
     }
 
     interface LamdaFunction {
