@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 //               6. (특정 함수들만 가능)
                 System.out::println
         );
+
+        LamdaFunction arg = calc();
+        int result = arg.squareParameter(50);
+        System.out.println("result : " + result);
     }
 
     View.OnClickListener clickListener = new View.OnClickListener() {
@@ -69,4 +73,12 @@ public class MainActivity extends AppCompatActivity {
         // 실행 블럭
     }
     */
+
+    public LamdaFunction calc() {
+        return num -> num * num;
+    }
+
+    interface LamdaFunction {
+        public abstract int squareParameter(int num);
+    }
 }
