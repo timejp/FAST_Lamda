@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 System.out::println
         );
 
-        LamdaFunction arg = calc();
+        LamdaFunction arg = calc(); // calc가 호출되면 calc 함숭 정의된 람다식이 넘어온다.
+        // arg : num -> num * num;
         int result = arg.squareParameter(50);
         System.out.println("result : " + result);
     }
@@ -79,6 +80,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     interface LamdaFunction {
-        public abstract int squareParameter(int num);
+        public abstract int squareParameter(int value);
     }
 }
