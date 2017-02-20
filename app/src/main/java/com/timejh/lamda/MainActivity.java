@@ -23,13 +23,32 @@ public class MainActivity extends AppCompatActivity {
         // 2. 콜백 객체에 함수가 하나여야 한다
 
         button.setOnClickListener((v) -> {
-                System.out.println("클릭");
-            }
+                    System.out.println("클릭");
+                }
         );
 
-        editText.setOnClickListener((v) -> {
+        editText.setOnClickListener(
+                System.out::println
+        );
 
-            }
+        editText.setOnClickListener(
+//               1.원형
+//                new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                          System.out.println(v);
+//                    }
+//                }
+//               2. 함수명 생략
+//                (View v) -> {System.out.println(v);}
+//               3. 함수 인자 타입 생략
+//                (v) -> {System.out.println(v);}
+//               4. 함수 괄호 생략
+//                v -> {System.out.println(v);}
+//               5. 한줄인 경우 코드 괄호 생략
+//                v -> System.out.println(v)
+//               6. (특정 함수들만 가능)
+                System.out::println
         );
     }
 
